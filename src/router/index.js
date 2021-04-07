@@ -11,6 +11,9 @@ export default new Router({
         },
         {
             path: '/',
+            /* require第一个参数为传为所依赖的模块，第二个参数为回调函数
+             * 这种方式是一个懒加载
+             */
             component: resolve => require(['../components/common/Home.vue'], resolve),
             meta: { title: '自述文件' },
             children:[

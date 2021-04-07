@@ -38,6 +38,7 @@
         },
         methods: {
             submitForm(formName) {
+                // element-ui表单校验
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
                         localStorage.setItem('ms_username',this.ruleForm.username);
